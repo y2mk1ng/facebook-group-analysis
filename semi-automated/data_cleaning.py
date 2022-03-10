@@ -8,7 +8,7 @@ Warning: you can only use this when you already have a .txt file that contains t
 '''
 
 import csv, pandas
-with open ('members_20220310.txt') as f: ## open your .txt file with your group member info here
+with open ('members_20220311.txt') as f: ## open your .txt file with your group member info here
     for line in f:
         content = f.readlines()
         all_data = []
@@ -18,7 +18,7 @@ with open ('members_20220310.txt') as f: ## open your .txt file with your group 
                 l = ''.join(list(content[num - 2]))
                 counts += 1
                 all_data.append(l)
-                with open('some_members_list.csv', 'w') as csv_file: ## you can change the file name if you want
+                with open('members_20220311.csv', 'w') as csv_file: ## you can change the file name if you want
                     writer = csv.writer(csv_file)
                     for word in all_data:
                         writer.writerow([word]) ## so that the names are added into specific rows in a column
