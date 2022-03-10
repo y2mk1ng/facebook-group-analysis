@@ -8,7 +8,7 @@ Warning: you can only use this when you already have a .txt file that contains t
 '''
 
 import csv, pandas
-with open ('some_members_list.txt') as f: ## open your .txt file with your group member info here
+with open ('members_20220310.txt') as f: ## open your .txt file with your group member info here
     for line in f:
         content = f.readlines()
         all_data = []
