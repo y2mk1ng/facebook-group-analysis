@@ -8,10 +8,13 @@ Warning: This is not yet finished.
 import requests
 import pandas
 import requests
+import time
 import datetime as dt
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.service import Service
 from bs4 import BeautifulSoup
@@ -61,6 +64,12 @@ for index in addr_list:
         for j in soup.find('a', "oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 mg4g778l pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb n00je7tq arfg74bv qs9ysxi8 k77z8yql btwxx1t3 abiwlrkh p8dawk7l q9uorilb lzcic4wl")['content']:
             print(j)
     '''
-    search = driver.find_element(By.XPATH, "//input[@type='search']") ## This should lead to the overall search on Facebook. So try some other xpath instead.
-    search.send_keys("朱玟希")
+    time.sleep(2)
+    wait = WebDriverWait(driver, 10)
+    button = driver.find_element(By.XPATH, '//div[@style="transform: none"]')
+    button.click()
+    #frame = wait.until(EC.presence_of_element_located((By.XPATH, '//input[@type = "search"]')))
+    search = driver.find_element(By.XPATH, '//input[@placeholder="Search Facebook"]') ## This should lead to the overall search on Facebook. So try some other xpath instead.
+    #search = driver.switch_to.frame(frame)
+    search.send_keys('朱玟希')
     search.send_keys(Keys.ENTER)
