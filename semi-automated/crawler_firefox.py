@@ -58,7 +58,8 @@ for index in addr_list:
     wait = WebDriverWait(driver, 10)
     ## search the contents of a specific group member
     #button = driver.find_element(By.XPATH, '//div[@class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3"]')
-    button = driver.find_element(By.CLASS_NAME, 'n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3') ### still not yet working though
+    #button = driver.find_element(By.CLASS_NAME, 'l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t bp9cbjyn owycx6da btwxx1t3 kt9q3ron ak7q8e6j isp2s0ed ri5dt5u2 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv tdjehn4e tv7at329 hv4rvrfc dati1w0a') ### still not yet working though
+    button = driver.find_element(By.CSS_SELECTOR, '.transform')
     button.click()
     #frame = wait.until(EC.presence_of_element_located((By.XPATH, '//input[@type = "search"]')))
     search = driver.find_element(By.XPATH, '//input[@placeholder="Search Facebook"]') ## This should lead to the overall search on Facebook. So try "Search this group instead. It might work.
