@@ -61,7 +61,7 @@ for index in addr_list:
     button = driver.find_element(By.CLASS_NAME, 'n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3') ### still not yet working though
     button.click()
     #frame = wait.until(EC.presence_of_element_located((By.XPATH, '//input[@type = "search"]')))
-    search = driver.find_element(By.XPATH, '//input[@placeholder="Search Facebook"]') ## This should lead to the overall search on Facebook. So try some other xpath instead.
+    search = driver.find_element(By.XPATH, '//input[@placeholder="Search Facebook"]') ## This should lead to the overall search on Facebook. So try "Search this group instead. It might work.
     #search = driver.switch_to.frame(frame)
     search.send_keys('朱玟希')
     search.send_keys(Keys.ENTER)
