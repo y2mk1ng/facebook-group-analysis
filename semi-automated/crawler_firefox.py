@@ -59,6 +59,7 @@ for index in addr_list:
     ## search the contents of a specific group member
     button = driver.find_element(By.XPATH, '//div[@aria-label="Search"]')
     button.click()
-    search = driver.find_element(By.XPATH, '//input[@placeholder="Search this group"]') 
-    search.send_keys('Beatrice Guo')
+    search = driver.find_element(By.XPATH, '//input[@aria-label="Search this group"]')
+    WebDriverWait(driver, 10)
+    search.send_keys('朱玟希')
     search.send_keys(Keys.ENTER)
