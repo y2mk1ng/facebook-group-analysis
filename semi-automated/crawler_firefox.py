@@ -49,7 +49,7 @@ else:
 ## other information (posts, members, etc.)
 date_now = dt.datetime.today().date()
 
-## crawling member information
+## searching for a member and crawling their activities
 for index in addr_list:
     group_id = index.split('/')[4]
     a = driver.get(group_addr)
