@@ -61,5 +61,6 @@ for index in addr_list:
     button.click()
     search = driver.find_element(By.XPATH, '//input[@aria-label="Search this group"]')
     WebDriverWait(driver, 10)
-    search.send_keys('朱玟希')
+    member_searched = input('Enter the member you want to search: ')
+    search.send_keys(member_searched)
     search.send_keys(Keys.ENTER)
