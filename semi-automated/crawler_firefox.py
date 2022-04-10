@@ -5,9 +5,6 @@ Python version 3.8
 Warning: This is not yet finished.
 '''
 
-import requests
-import pandas
-import requests
 import time
 import datetime as dt
 from selenium import webdriver
